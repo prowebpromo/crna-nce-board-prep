@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRNA NCE Board-Prep System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside>
+    <div class="brand"><span>NCE</span><div><h1>CRNA Board Prep</h1><p>Practice, review, and track weak areas.</p></div></div>
+    <nav>
+      <button class="active" data-view="practice">Practice</button>
+      <button data-view="exam">Exam</button>
+      <button data-view="review">Review</button>
+      <button data-view="progress">Progress</button>
+      <button data-view="library">Library</button>
+    </nav>
+    <section class="stats"><b id="bankCount">0</b> questions<br><b id="masteredCount">0</b> mastered<button id="reset">Reset Progress</button></section>
+  </aside>
+  <main>
+    <section id="practice" class="view active">
+      <header><div><p>Practice Mode</p><h2>Adaptive Question Drill</h2></div><div><select id="domain"></select><select id="filter"><option value="all">All questions</option><option value="unanswered">Unanswered</option><option value="missed">Previously missed</option><option value="flagged">Flagged</option></select></div></header>
+      <article class="panel"><div class="meta"><span id="qid">Question</span><span id="qdomain">Domain</span></div><h3 id="stem">Load a question bank to begin.</h3><div id="choices" class="choices"></div><div class="controls"><span>Confidence</span><button data-conf="low">Low</button><button data-conf="medium">Medium</button><button data-conf="high">High</button><button id="flag">Flag</button></div><div id="feedback" class="feedback hidden"></div><div class="actions"><button id="check">Check Answer</button><button id="next">Next Question</button></div></article>
+    </section>
+    <section id="exam" class="view"><header><div><p>Exam Mode</p><h2>Timed Board-Style Set</h2></div><div><input id="examSize" type="number" min="5" max="300" value="25"><button id="startExam">Start</button></div></header><article class="panel"><div class="meta"><span id="examProgress">No exam running</span><span id="timer">00:00</span></div><h3 id="examStem">Start an exam set when ready.</h3><div id="examChoices" class="choices"></div><div class="actions"><button id="prevExam">Previous</button><button id="nextExam">Next</button><button id="finishExam">Finish</button></div><div id="examResults" class="feedback hidden"></div></article></section>
+    <section id="review" class="view"><header><div><p>Review</p><h2>Missed, Flagged, and Rationales</h2></div><select id="reviewFilter"><option value="missed">Missed</option><option value="flagged">Flagged</option><option value="all">All answered</option></select></header><div id="reviewList" class="list"></div></section>
+    <section id="progress" class="view"><header><div><p>Progress</p><h2>Domain Performance</h2></div></header><div id="progressGrid" class="grid"></div></section>
+    <section id="library" class="view"><header><div><p>Library</p><h2>Import and Manage Questions</h2></div></header><div class="grid"><article class="panel"><h3>Load Question Bank JSON</h3><p>Import a generated or edited question bank JSON file.</p><input id="importFile" type="file" accept="application/json,.json"><button id="exportProgress">Export Progress</button></article><article class="panel"><h3>Current Domains</h3><div id="domains" class="list"></div></article></div></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
