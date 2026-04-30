@@ -248,6 +248,7 @@ select:focus,input:focus{outline:2px solid var(--primary);border-color:var(--pri
     <button class="nav-btn" data-view="exam"><span class="icon">⏱️</span> Mock Exam</button>
     <button class="nav-btn" data-view="review"><span class="icon">🔍</span> Review</button>
     <button class="nav-btn" data-view="progress"><span class="icon">📈</span> Progress</button>
+    <button class="nav-btn" data-view="help"><span class="icon">ℹ️</span> How to Use</button>
   </nav>
   <div class="sidebar-stats">
     <div class="stat-row"><span>Attempted</span><b id="statAttempted">0</b></div>
@@ -617,6 +618,48 @@ select:focus,input:focus{outline:2px solid var(--primary);border-color:var(--pri
   <div class="card" style="margin-top:4px">
     <h3 style="font-size:15px;font-weight:700;margin-bottom:14px">Subtopic Breakdown — Weakest First</h3>
     <div id="subtopicGrid"></div>
+  </div>
+</section>
+
+<section class="view" id="view-help">
+  <div class="page-header"><div class="label">Help</div><h2>How to Use This App</h2></div>
+  <div class="card" style="max-width:720px;margin:0 auto">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">What it is</h3>
+    <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:18px">A self-contained browser app with 900 NCE-style questions, full rationales, a 6-week study plan, and adaptive mock exams. No login required. No internet required after the page loads. Progress saves automatically in your browser.</p>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">Question Bank</h3>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:18px;font-size:14px">
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Basic Sciences</b><br><span style="color:var(--muted)">180 questions · 20%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Equipment &amp; Technology</b><br><span style="color:var(--muted)">170 questions · 19%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>General Principles</b><br><span style="color:var(--muted)">340 questions · 38%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Surgical &amp; Special Pops</b><br><span style="color:var(--muted)">210 questions · 23%</span></div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">Modes</h3>
+    <div style="display:grid;gap:10px;margin-bottom:18px;font-size:14px">
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📊 Dashboard</b> — Readiness score, domain accuracy bars, and daily benchmarks at a glance.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📅 Study Plan</b> — 6-week calendar with daily targets and weekly milestones. Follow it in order for best results.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📖 Study Guide</b> — Domain-by-domain content review: key facts, drug tables, crisis protocols. Each section has a <em>Practice this topic</em> button to jump straight into filtered practice.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>🎯 Practice</b> — Your daily driver. Filter by domain, difficulty, or status (unanswered, missed, flagged). One question at a time with full rationales. Flag questions to revisit.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>⏱️ Mock Exam</b> — Simulates real NCE conditions. No backtracking — each answer is final. Three curated Stage 6 exams: Mock 1 (100Q, Week 2), Mock 2 (140Q, Week 4), Mock 3 (170Q, Weeks 5–6). Or set a custom size.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>🔍 Review</b> — All missed and flagged questions in one place. Return here after every session.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📈 Progress</b> — Domain accuracy bars, subtopic breakdown (weakest first), and readiness benchmarks.</div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">Readiness Benchmarks</h3>
+    <div style="background:var(--bg);border-radius:8px;padding:14px;font-size:14px;margin-bottom:18px">
+      <div style="display:grid;gap:6px">
+        <div>✅ Overall accuracy <b>≥ 85%</b></div>
+        <div>✅ Every domain <b>≥ 80%</b></div>
+        <div>✅ Hard questions <b>≥ 70%</b></div>
+        <div>✅ Two consecutive mock exams at <b>85%+</b></div>
+        <div>✅ Zero repeated critical errors across two mocks</div>
+      </div>
+      <p style="margin-top:10px;color:var(--muted)">Do not sit for the exam until every benchmark above is met.</p>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">⚠️ One Caution</h3>
+    <p style="font-size:14px;color:var(--text);line-height:1.7">Progress is stored in your browser's local storage. Clearing browser data or switching browsers resets it. Use the same browser consistently throughout your 6-week study period.</p>
   </div>
 </section>
 </main></div><script>
