@@ -1,0 +1,17 @@
+{
+  "questions": [
+    {
+      "id": "DEMO-001",
+      "domain": "Basic Sciences",
+      "stem": "A sample question is loaded so the app is usable before importing your CRNA NCE question bank.",
+      "choices": {
+        "A": "Select this to see how answer checking works.",
+        "B": "This is a distractor.",
+        "C": "This is another distractor.",
+        "D": "This is another distractor."
+      },
+      "answer": "A",
+      "rationale": "Replace this demo item by importing a generated CRNA NCE JSON question bank from the Library tab."
+    }
+  ]
+}
