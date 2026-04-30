@@ -288,10 +288,59 @@ select:focus, input:focus { outline: 2px solid var(--primary); border-color: var
 
 /* ── Study Guide ── */
 .guide-section { margin-bottom: 28px; }
-.guide-section h3 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--primary-light); }
-.guide-item { padding: 12px 16px; background: var(--bg); border-radius: 8px; margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
-.formula-box { background: #f8fafc; border: 2px solid var(--primary-light); border-radius: 10px; padding: 16px 20px; font-family: monospace; font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
-.formula-box .formula-title { font-family: inherit; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 8px; }
+.guide-section-header {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-light);
+}
+.guide-section-icon { font-size: 22px; }
+.guide-section-header h3 { font-size: 17px; font-weight: 700; color: var(--primary); margin: 0; }
+.guide-items-grid { display: flex; flex-direction: column; gap: 6px; }
+.guide-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 11px 14px;
+  background: var(--bg);
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  font-size: 14px; line-height: 1.55;
+  transition: background .12s;
+}
+.guide-item:hover { background: var(--primary-light); border-left-color: var(--primary); }
+.guide-item-dot { color: var(--primary); font-weight: 900; font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+.guide-item b { color: var(--primary); }
+
+/* Formula cards */
+.formula-grid { display: flex; flex-direction: column; gap: 8px; }
+.formula-card {
+  background: #f8fafc;
+  border: 1.5px solid var(--primary-light);
+  border-radius: 10px;
+  padding: 13px 16px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.formula-card:hover { border-color: var(--primary); background: var(--primary-light); }
+.formula-arrow { color: var(--primary); font-size: 18px; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+.formula-text { font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.5; color: var(--text); }
+.formula-text .formula-example { font-size: 12px; color: var(--text-muted); font-family: inherit; margin-top: 2px; }
+
+/* Callout / tip box */
+.guide-callout {
+  background: var(--warn-bg);
+  border: 1.5px solid #fcd34d;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.guide-callout b { color: var(--warn); }
+
+/* Domain weight visual */
+.domain-weight-visual { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.dw-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; font-size: 13px; }
+.dw-name { font-weight: 600; }
+.dw-pct { font-weight: 700; color: var(--primary); }
+.dw-bar { grid-column: 1/-1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.dw-fill { height: 100%; border-radius: 4px; background: var(--primary); }
 
 /* ── Review ── */
 .review-item { border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 14px; background: var(--surface); }
@@ -973,28 +1022,86 @@ function initGuide() {
   renderGuide();
 }
 
+const SECTION_ICONS = {
+  'NCE Verified Facts': '📋',
+  'Domain Weighting': '⚖️',
+  '95% Readiness Standard': '🎯',
+  'Test Strategy': '🧠',
+  'High-Yield Formulas': '🧮',
+  'Oxyhemoglobin Dissociation Curve': '📈',
+  'Pulmonary Physiology': '🫁',
+  'Acid-Base': '⚗️',
+  'High-Yield Pharmacology Concepts': '💊',
+  'Anesthesia Machine Key Facts': '🔧',
+  'Vaporizers': '💨',
+  'Airway Equipment': '🫁',
+  'Monitoring': '📡',
+  'Preoperative Assessment': '📝',
+  'Airway Management Crisis': '🚨',
+  'Neuraxial Anesthesia': '💉',
+  'Crisis Management': '🆘',
+  'PONV & Fluids': '💧',
+  'Cardiac Valve Hemodynamic Goals': '❤️',
+  'Obstetric Anesthesia': '🤰',
+  'Pediatric Anesthesia': '👶',
+  'Special Populations': '🏥',
+};
+
+function boldKey(text) {
+  // Bold the part before a colon if it reads like a term
+  return text.replace(/^([^:]{3,40}):\s/, '<b>$1:</b> ');
+}
+
 function renderGuide() {
   const idx = parseInt(document.getElementById('guideSelect').value) || 0;
   const section = GUIDE.sections[idx];
   if (!section) return;
   
   const html = section.content.map(block => {
+    const icon = SECTION_ICONS[block.title] || '▸';
+    const header = `
+      <div class="guide-section-header">
+        <span class="guide-section-icon">${icon}</span>
+        <h3>${block.title}</h3>
+      </div>`;
+
     if (block.type === 'formula') {
-      return `
-        <div class="guide-section">
-          <h3>${block.title}</h3>
-          <div class="formula-box">
-            ${block.formulas.map(f => `<div>▸ ${f}</div>`).join('')}
-          </div>
-        </div>
-      `;
+      const cards = block.formulas.map(f => {
+        const [main, ...rest] = f.split('  →  ');
+        const example = rest.join('  →  ');
+        return `
+          <div class="formula-card">
+            <span class="formula-arrow">▸</span>
+            <div class="formula-text">
+              ${main}
+              ${example ? `<div class="formula-example">→ ${example}</div>` : ''}
+            </div>
+          </div>`;
+      }).join('');
+      return `<div class="guide-section">${header}<div class="formula-grid">${cards}</div></div>`;
+
+    } else if (block.title === 'Domain Weighting') {
+      const weights = [
+        { name: 'General Principles of Anesthesia', pct: 35 },
+        { name: 'Surgical & Special Populations', pct: 25 },
+        { name: 'Basic Sciences', pct: 20 },
+        { name: 'Equipment & Technology', pct: 20 },
+      ];
+      const bars = weights.map(w => `
+        <div class="dw-row">
+          <span class="dw-name">${w.name}</span>
+          <span class="dw-pct">${w.pct}%</span>
+          <div class="dw-bar"><div class="dw-fill" style="width:${w.pct * 2.5}%"></div></div>
+        </div>`).join('');
+      return `<div class="guide-section">${header}<div class="domain-weight-visual">${bars}</div></div>`;
+
     } else {
-      return `
-        <div class="guide-section">
-          <h3>${block.title}</h3>
-          ${block.items.map(item => `<div class="guide-item">• ${item}</div>`).join('')}
-        </div>
-      `;
+      const items = block.items.map(item => `
+        <div class="guide-item">
+          <span class="guide-item-dot">▸</span>
+          <span>${boldKey(item)}</span>
+        </div>`).join('');
+      return `<div class="guide-section">${header}<div class="guide-items-grid">${items}</div></div>`;
     }
   }).join('');
   
