@@ -1,0 +1,106 @@
+{
+  "title": "CRNA NCE Study Guide",
+  "sections": [
+    {
+      "title": "Exam Facts and Readiness Standard",
+      "items": [
+        "The NCE is a variable-length computerized adaptive test for entry into nurse anesthesia practice.",
+        "Question count ranges from 100 to 170 questions, with a maximum testing time of 3 hours including tutorial time.",
+        "Questions are presented one at a time. Once an answer is confirmed, the candidate cannot return to previous questions.",
+        "Content weighting: Basic Sciences 20%; Equipment, Instrumentation and Technology 20%; General Principles of Anesthesia 35%; Surgical Procedures and Special Populations 25%.",
+        "Passing scaled score is 450 on a 0 to 900 scale. Domain scores are independent and should not be averaged.",
+        "Readiness target: two consecutive mixed mock exams at 85% or higher, every major domain at 80% or higher, high-risk domains at 90% or higher, hard questions at 70% or higher, and no repeated critical safety errors."
+      ]
+    },
+    {
+      "title": "Six-Week Strategy",
+      "items": [
+        "Week 1: Reset diagnostics, basic sciences, physiology, pharmacology, and equipment fundamentals. Build the error log from day one.",
+        "Week 2: Airway, monitoring, fluids, blood, regional, and general anesthesia foundations. Take Mock 1 at the end of Week 2.",
+        "Week 3: Convert to mixed-domain case practice. Add equipment troubleshooting, preop-to-PACU decisions, and surgical procedure integration.",
+        "Week 4: Pressure-test special populations, crisis management, hard questions, and timed performance. Take Mock 2.",
+        "Week 5: Remediate weakest two domains and drill airway, pharmacology, monitoring, and physiology.",
+        "Week 6: Take Mock 3, review rationales, taper volume, and focus on formulas, safety algorithms, and missed questions."
+      ]
+    },
+    {
+      "title": "Daily Study Method",
+      "items": [
+        "Use active recall before reading notes. Try to answer the question from memory before looking at options.",
+        "Mark confidence before checking the answer: High, Medium, Low, or Guess.",
+        "Review every rationale, including wrong-answer rationales, because distractors often contain the teaching point.",
+        "Log every miss by domain, subtopic, mistake type, correct reasoning, and retest date.",
+        "Retest weak topics within 72 hours. Do not let misses age without retrieval practice.",
+        "Practice forward-only commitment because the live NCE does not permit backtracking."
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "title": "Domain I: Basic Sciences (20%)",
+      "items": [
+        "Cardiac output = HR x SV. Stroke volume depends on preload, afterload, and contractility.",
+        "MAP = DBP + 1/3(SBP - DBP). Coronary perfusion pressure = aortic DBP - LVEDP.",
+        "Tachycardia shortens diastole and can severely impair coronary filling, especially in CAD and aortic stenosis.",
+        "FRC = ERV + RV. FRC decreases with supine positioning, obesity, pregnancy, and anesthesia, increasing apnea desaturation risk.",
+        "A-a gradient = PAO2 - PaO2. Elevation suggests V/Q mismatch, shunt, or diffusion impairment.",
+        "100% FiO2 may not correct true shunt; V/Q mismatch usually improves with supplemental oxygen.",
+        "CPP = MAP - ICP, or MAP - CVP if CVP is higher. CPP below about 50 mmHg risks ischemia.",
+        "Cerebral autoregulation generally maintains CBF over MAP 50-150 mmHg in normotensive adults; chronic hypertension shifts the curve right.",
+        "PaCO2 strongly controls cerebral blood flow. Hypocapnia decreases CBF and ICP; hypercapnia increases CBF and ICP.",
+        "Aortic stenosis goals: sinus rhythm, slow-normal HR, full preload, and maintained SVR. Avoid tachycardia, hypotension, and vasodilation.",
+        "Aortic regurgitation goals: faster HR, lower SVR, and adequate preload. Avoid bradycardia and high afterload.",
+        "Mitral stenosis goals: low-normal HR, sinus rhythm, moderate preload, and maintained SVR. Avoid tachycardia and atrial fibrillation.",
+        "Mitral regurgitation generally benefits from higher HR and lower SVR. Avoid bradycardia and high afterload.",
+        "HOCM worsens with reduced preload, reduced SVR, tachycardia, and positive inotropy. Maintain preload, SVR, and sinus rhythm.",
+        "Lower blood:gas coefficient means faster inhaled-agent onset and offset. Desflurane and nitrous oxide are fastest.",
+        "Succinylcholine contraindications include malignant hyperthermia history, major burns after 24 hours, denervation injuries, crush injury, prolonged immobilization, myopathies, and pseudocholinesterase deficiency."
+      ]
+    },
+    {
+      "title": "Domain II: Equipment, Instrumentation and Technology (20%)",
+      "items": [
+        "Oxygen pipeline pressure is usually about 50 psi. Oxygen E-cylinder pressure when full is about 2200 psi with about 660 L available.",
+        "E-cylinder oxygen estimate: liters available = psi x 0.3; duration = liters available / flow rate.",
+        "Fail-safe valves reduce or interrupt nitrous oxide when oxygen supply pressure falls, but they do not prevent hypoxic mixtures from all causes.",
+        "Oxygen analyzers are the final defense against hypoxic gas delivery; check them during machine checkout.",
+        "Vaporizers are agent-specific, temperature compensated, and concentration calibrated. Filling with the wrong agent can cause dangerous output error.",
+        "Desflurane requires a heated, pressurized vaporizer because of its high vapor pressure and low boiling point.",
+        "Circle-system rebreathing can occur with exhausted CO2 absorbent, incompetent unidirectional valves, or inadequate fresh gas flow during some configurations.",
+        "Capnography patterns are high-yield: obstruction creates a slanted upstroke, rebreathing raises baseline, esophageal intubation rapidly loses waveform, and embolism can abruptly reduce ETCO2.",
+        "Pulse oximetry can lag during rapid desaturation, especially with poor perfusion. Treat waveform quality as part of the reading.",
+        "Peripheral nerve stimulator interpretation requires correct electrode placement, current, and understanding of train-of-four fade."
+      ]
+    },
+    {
+      "title": "Domain III: General Principles of Anesthesia (35%)",
+      "items": [
+        "Airway planning must include Plan A, Plan B, Plan C, and rescue oxygenation before induction.",
+        "Rapid sequence induction prioritizes preoxygenation, aspiration-risk mitigation, rapid paralysis, and a prepared failed-airway pathway.",
+        "Do not let a difficult intubation become a failed oxygenation event. Oxygenation is the endpoint that matters.",
+        "Preoxygenation is most vulnerable in pregnancy, obesity, sepsis, pediatric patients, and patients with reduced FRC or increased oxygen consumption.",
+        "Hypotension after induction often reflects vasodilation, myocardial depression, relative hypovolemia, or sympathetic withdrawal. Treat the cause, not only the number.",
+        "Balanced anesthesia combines hypnosis, amnesia, analgesia, akinesia, autonomic control, and physiologic stability.",
+        "Regional anesthesia risks include sympathectomy, local anesthetic systemic toxicity, high spinal, nerve injury, bleeding, and infection.",
+        "LAST treatment centers on airway support, seizure control, ACLS modifications, and lipid emulsion therapy.",
+        "Massive transfusion decisions should consider ongoing bleeding, hemodynamics, labs, temperature, calcium, acid-base status, and coagulation testing when available.",
+        "Malignant hyperthermia clues include rising ETCO2, tachycardia, rigidity, acidosis, hyperkalemia, and hyperthermia as a later sign. Treat with dantrolene and trigger removal."
+      ]
+    },
+    {
+      "title": "Domain IV: Surgical Procedures and Special Populations (25%)",
+      "items": [
+        "Pregnancy decreases FRC and increases oxygen consumption, causing rapid desaturation during apnea.",
+        "Aortocaval compression can reduce venous return in late pregnancy. Use left uterine displacement when appropriate.",
+        "Pediatric patients have higher oxygen consumption and lower reserve; bradycardia is often hypoxia until proven otherwise.",
+        "Older adults often require lower anesthetic doses and are more vulnerable to hypotension, delirium, hypothermia, and drug accumulation.",
+        "Obesity decreases FRC, increases difficult-airway risk, and may require ramped positioning for preoxygenation and intubation.",
+        "Laparoscopy can decrease venous return, increase SVR, raise PaCO2, and worsen respiratory mechanics.",
+        "One-lung ventilation requires confirmation of lung isolation, oxygenation strategy, and awareness that volatile anesthetics can blunt HPV.",
+        "Neurosurgical anesthesia emphasizes ICP control, cerebral perfusion, smooth airway management, and avoidance of hypoxia, hypercarbia, and hypotension.",
+        "Tourniquet release can cause transient hypotension, ETCO2 changes, potassium and lactate increase, and temperature decrease. Anticipate and support hemodynamics.",
+        "Special-population questions usually test physiology applied to anesthetic priorities, not isolated memorization."
+      ]
+    }
+  ]
+}
