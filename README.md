@@ -30,3 +30,5 @@ Use the Library tab to import JSON in this shape:
   ]
 }
 ```
+
+_Last deploy trigger: 2026-04-30._
