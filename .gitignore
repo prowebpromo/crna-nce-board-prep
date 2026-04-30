@@ -4,5 +4,4 @@ Thumbs.db
 __pycache__/
 .env
 .env.*
-data/questions.json
 crna-nce-progress.json
