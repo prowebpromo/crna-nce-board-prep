@@ -624,42 +624,115 @@ select:focus,input:focus{outline:2px solid var(--primary);border-color:var(--pri
 <section class="view" id="view-help">
   <div class="page-header"><div class="label">Help</div><h2>How to Use This App</h2></div>
   <div class="card" style="max-width:720px;margin:0 auto">
-    <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">What it is</h3>
-    <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:18px">A self-contained browser app with 900 NCE-style questions, full rationales, a 6-week study plan, and adaptive mock exams. No login required. No internet required after the page loads. Progress saves automatically in your browser.</p>
+
+    <div style="background:#fff3cd;border:1px solid #f0a500;border-radius:10px;padding:14px 16px;margin-bottom:22px;font-size:14px;line-height:1.7">
+      <div style="font-weight:700;font-size:15px;margin-bottom:6px">&#9888;&#65039; Critical: Protect Your Progress</div>
+      <ul style="margin:0;padding-left:18px;color:#5a3e00">
+        <li><b>Use one browser on one device</b> for your entire 6-week study period.</li>
+        <li><b>Do not use Incognito / Private mode.</b> It clears storage when you close the window.</li>
+        <li><b>Do not clear browser history or site data.</b> This resets all progress.</li>
+        <li>Chrome on a laptop is the most reliable setup. <b>Bookmark this URL now.</b></li>
+        <li>Internet is required only to open the page. After it loads, it runs without internet.</li>
+      </ul>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">&#128640; First Time? Start Here</h3>
+    <div style="background:var(--bg);border-radius:10px;padding:14px 16px;margin-bottom:22px;font-size:14px;line-height:1.8">
+      <ol style="margin:0;padding-left:20px">
+        <li>Open this page in Chrome, Edge, or Safari. <b>Bookmark it now.</b></li>
+        <li>Click <b>Dashboard</b> &#8212; review your starting readiness score.</li>
+        <li>Click <b>Study Plan</b> &#8212; this is your roadmap. Start with Week 1, Day 1.</li>
+        <li>Click <b>Practice</b> and complete today&#8217;s assigned questions. Read every rationale.</li>
+        <li>After your session, click <b>Review</b> to redo any missed or flagged questions.</li>
+        <li>Check <b>Progress</b> weekly to find your weakest domains.</li>
+        <li><b>Take Mock Exams only when the Study Plan schedules them.</b></li>
+      </ol>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">What It Is</h3>
+    <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:18px">A self-contained browser app with <b>759 NCE-style questions</b> (National Certification Examination for entry-level nurse anesthetists), full rationales, a 6-week study plan, and full-length mock exams. No login required. Progress saves automatically in your browser &#8212; no account, no sync.</p>
 
     <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">Question Bank</h3>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:18px;font-size:14px">
-      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Basic Sciences</b><br><span style="color:var(--muted)">180 questions · 20%</span></div>
-      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Equipment &amp; Technology</b><br><span style="color:var(--muted)">170 questions · 19%</span></div>
-      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>General Principles</b><br><span style="color:var(--muted)">340 questions · 38%</span></div>
-      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Surgical &amp; Special Pops</b><br><span style="color:var(--muted)">210 questions · 23%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Basic Sciences</b><br><span style="color:var(--muted)">176 questions &middot; 23%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Equipment &amp; Technology</b><br><span style="color:var(--muted)">148 questions &middot; 20%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>General Principles</b><br><span style="color:var(--muted)">275 questions &middot; 36%</span></div>
+      <div style="background:var(--bg);border-radius:8px;padding:10px"><b>Surgical &amp; Special Populations</b><br><span style="color:var(--muted)">160 questions &middot; 21%</span></div>
     </div>
 
-    <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">Modes</h3>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">&#128203; Daily Study Routine</h3>
+    <div style="background:var(--bg);border-radius:10px;padding:14px 16px;margin-bottom:22px;font-size:14px;line-height:1.8">
+      <ol style="margin:0;padding-left:20px">
+        <li>Open <b>Dashboard.</b> Check today&#8217;s Study Plan target.</li>
+        <li>Go to <b>Practice.</b> Complete your assigned questions.</li>
+        <li>Read every rationale &#8212; including questions you got right.</li>
+        <li>Flag anything you guessed on, found confusing, or want to revisit.</li>
+        <li>Go to <b>Review.</b> Redo every missed and flagged question before ending your session.</li>
+        <li>Check <b>Progress</b> once per week. If a domain is below benchmark, filter that domain in Practice and work through missed and unanswered questions.</li>
+      </ol>
+      <p style="margin-top:10px;color:var(--muted);font-size:13px">Target: ~20 questions/day, 6 days/week. If you miss a day, pick up where you left off.</p>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:4px">Modes</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Use the left menu to switch modes. Recommended order: Study Plan &#8594; Practice &#8594; Review &#8594; Progress &#8594; Mock Exam (when scheduled).</p>
     <div style="display:grid;gap:10px;margin-bottom:18px;font-size:14px">
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📊 Dashboard</b> — Readiness score, domain accuracy bars, and daily benchmarks at a glance.</div>
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📅 Study Plan</b> — 6-week calendar with daily targets and weekly milestones. Follow it in order for best results.</div>
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📖 Study Guide</b> — Domain-by-domain content review: key facts, drug tables, crisis protocols. Each section has a <em>Practice this topic</em> button to jump straight into filtered practice.</div>
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>🎯 Practice</b> — Your daily driver. Filter by domain, difficulty, or status (unanswered, missed, flagged). One question at a time with full rationales. Flag questions to revisit.</div>
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>⏱️ Mock Exam</b> — Simulates real NCE conditions. No backtracking — each answer is final. Three curated Stage 6 exams: Mock 1 (100Q, Week 2), Mock 2 (140Q, Week 4), Mock 3 (170Q, Weeks 5–6). Or set a custom size.</div>
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>🔍 Review</b> — All missed and flagged questions in one place. Return here after every session.</div>
-      <div style="border-left:3px solid var(--primary);padding-left:12px"><b>📈 Progress</b> — Domain accuracy bars, subtopic breakdown (weakest first), and readiness benchmarks.</div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#128202; Dashboard</b> &#8212; Today&#8217;s snapshot. Readiness score, domain accuracy bars, daily benchmarks. Check this every time you open the app.
+      </div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#128197; Study Plan</b> &#8212; <em>Start here.</em> 6-week calendar with daily targets and weekly milestones. Follow it in order. Questions answered in Practice count toward your plan targets.
+      </div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#128218; Study Guide</b> &#8212; Content review when a concept feels weak. Domain summaries, drug tables, crisis protocols. Each section has a <em>Practice this topic</em> button to jump straight into filtered questions.
+      </div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#127919; Practice</b> &#8212; Your daily work mode. Filter by domain, difficulty, or status (Unanswered, Missed, Flagged). One question at a time with full rationale after each answer.
+      </div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#9201;&#65039; Mock Exam</b> &#8212; Full exam simulation. <b>Final-answer mode: once you answer, you cannot go back.</b> Treat each mock exactly like the real NCE. Three scheduled exams: Mock 1 (100Q, Week 2), Mock 2 (140Q, Week 4), Mock 3 (170Q, Weeks 5&#8211;6). Custom size also available. Rationales appear after completion.
+      </div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#128269; Review</b> &#8212; All missed and flagged questions in one place. Open this after every session before starting new questions.
+      </div>
+      <div style="border-left:3px solid var(--primary);padding-left:12px">
+        <b>&#128200; Progress</b> &#8212; Deep diagnostics. Domain accuracy, subtopic breakdown sorted weakest-first, readiness benchmarks. Check weekly, not daily.
+      </div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">Status Definitions</h3>
+    <div style="background:var(--bg);border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:14px;line-height:1.8">
+      <div><b>Unanswered</b> &#8212; questions you have not attempted yet.</div>
+      <div><b>Missed</b> &#8212; questions you answered incorrectly.</div>
+      <div><b>Flagged</b> &#8212; questions you marked for later review.</div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">If a Mock Score Is Below Target</h3>
+    <div style="background:var(--bg);border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:14px;line-height:1.8">
+      <div><b>Score &lt;75%</b> &#8212; Pause mocks. Filter your weakest domain in Practice. Complete missed and unanswered questions. Retake after 3 days of focused review.</div>
+      <div><b>Score 75&#8211;84%</b> &#8212; Review all flagged and missed questions. Run a custom 50Q filtered session in your weakest domain, then continue the plan.</div>
+      <div><b>Score &#8805;85%</b> &#8212; On track. Proceed to the next week.</div>
     </div>
 
     <h3 style="font-size:16px;font-weight:700;margin-bottom:10px">Readiness Benchmarks</h3>
     <div style="background:var(--bg);border-radius:8px;padding:14px;font-size:14px;margin-bottom:18px">
+      <p style="margin:0 0 10px;color:var(--muted);font-size:13px">Best practice: delay scheduling or sitting for the exam until every benchmark below is met.</p>
       <div style="display:grid;gap:6px">
-        <div>✅ Overall accuracy <b>≥ 85%</b></div>
-        <div>✅ Every domain <b>≥ 80%</b></div>
-        <div>✅ Hard questions <b>≥ 70%</b></div>
-        <div>✅ Two consecutive mock exams at <b>85%+</b></div>
-        <div>✅ Zero repeated critical errors across two mocks</div>
+        <div>&#10003; Overall accuracy <b>&#8805; 85%</b></div>
+        <div>&#10003; Every domain <b>&#8805; 80%</b></div>
+        <div>&#10003; Hard questions <b>&#8805; 70%</b></div>
+        <div>&#10003; Two consecutive mock exams at <b>85%+</b></div>
+        <div>&#10003; Zero repeated critical errors across two mocks <span style="color:var(--muted);font-size:12px">(e.g., failed airway, malignant hyperthermia, LAST)</span></div>
       </div>
-      <p style="margin-top:10px;color:var(--muted)">Do not sit for the exam until every benchmark above is met.</p>
     </div>
 
-    <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">⚠️ One Caution</h3>
-    <p style="font-size:14px;color:var(--text);line-height:1.7">Progress is stored in your browser's local storage. Clearing browser data or switching browsers resets it. Use the same browser consistently throughout your 6-week study period.</p>
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">Troubleshooting</h3>
+    <div style="font-size:14px;line-height:1.8;margin-bottom:4px">
+      <div style="margin-bottom:8px"><b>Progress appears reset:</b> You likely cleared browser data, used a different browser, or used Incognito mode. Always return to the same browser you started with.</div>
+      <div style="margin-bottom:8px"><b>App won&#8217;t load without internet:</b> You need a connection to open the URL. Once loaded, it runs offline until you close or reload the tab.</div>
+      <div style="margin-bottom:8px"><b>Switching devices:</b> Progress does not sync between devices. Choose one device for the full 6 weeks.</div>
+      <div><b>Mock exam answer locked by mistake:</b> Final-answer mode is intentional &#8212; it mirrors real NCE conditions. Treat it as a test-day lesson in reading carefully before submitting.</div>
+    </div>
+
   </div>
 </section>
 </main></div><script>
