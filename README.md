@@ -1,34 +1,65 @@
-# CRNA NCE Board-Prep System
+# CRNA NCE Board Prep
 
-Interactive CRNA NCE board-prep app with practice mode, timed exam mode, rationale review, confidence flags, and progress tracking.
+A self-contained browser study app for the National Certification Examination (NCE) for entry-level nurse anesthetists.
 
-## GitHub Pages
+**Live app:** https://prowebpromo.github.io/crna-nce-board-prep
 
-This app is static and can run on GitHub Pages. No backend is required.
+---
 
-1. Open `Settings` -> `Pages` in this repository.
-2. Under `Build and deployment`, choose `GitHub Actions`.
-3. The workflow at `.github/workflows/pages.yml` publishes the site.
+## What it includes
 
-The app stores study progress in each browser's local storage. Keep the full CRNA question bank in a private repo unless you are comfortable publishing that content.
+- **759 NCE-style questions** across all four content domains
+- Full rationales for every answer choice — correct and incorrect
+- **6-week study plan** with daily targets and weekly milestones
+- **Practice mode** with filtering by domain, difficulty, and question status
+- **Mock exams** scheduled at Weeks 2, 4, and 5–6
+- **Review mode** collecting all missed and flagged questions in one place
+- **Progress tracking** with domain accuracy and subtopic breakdown
+- **Study Guide** with domain summaries, drug tables, and crisis protocols
 
-## Question Bank
+## Question bank
 
-Use the Library tab to import JSON in this shape:
+| Domain | Questions | NCE Weight |
+|---|---|---|
+| Basic Sciences | 176 | 23% |
+| Equipment & Technology | 148 | 20% |
+| General Principles | 275 | 36% |
+| Surgical & Special Populations | 160 | 21% |
 
-```json
-{
-  "questions": [
-    {
-      "id": "Q001",
-      "domain": "Basic Sciences",
-      "stem": "Question text",
-      "choices": { "A": "Choice A", "B": "Choice B", "C": "Choice C", "D": "Choice D" },
-      "answer": "A",
-      "rationale": "Why the answer is correct."
-    }
-  ]
-}
-```
+## How to use it
 
-_Last deploy trigger: 2026-04-30._
+1. Open the app in Chrome, Edge, or Safari. Bookmark it.
+2. Go to **Study Plan** and start Week 1, Day 1.
+3. Use **Practice** for daily questions. Read every rationale.
+4. After each session, go to **Review** to redo missed and flagged questions.
+5. Take **Mock Exams only when the Study Plan schedules them.**
+6. Check **Progress** weekly to find weak domains.
+
+Full instructions are in the **How to Use** tab inside the app.
+
+## Important: protect your progress
+
+Progress saves automatically in your browser. No account or login required.
+
+- Use **one browser on one device** for the full 6 weeks
+- Do **not** use Incognito or Private mode
+- Do **not** clear browser history or site data
+- Switching browsers or devices will reset your progress
+
+## Readiness benchmarks
+
+Best practice: do not sit for the NCE until all of the following are met.
+
+- Overall accuracy ≥ 85%
+- Every domain ≥ 80%
+- Hard questions ≥ 70%
+- Two consecutive mock exams at 85%+
+- Zero repeated critical errors across two mocks
+
+## Disclaimer
+
+This app is a study aid. Questions and rationales were developed using AI-assisted authoring and multi-model review. Content has not been independently verified by a licensed anesthesia professional. It is not affiliated with NBCRNA and does not guarantee exam passage. Use it as a supplement to your program's curriculum, not a replacement.
+
+---
+
+No login. No installation. No internet required after the page loads.
