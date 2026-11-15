@@ -63,3 +63,11 @@ This app is a study aid. Questions and rationales were developed using AI-assist
 ---
 
 No login. No installation. No internet required after the page loads.
+
+## Development checks
+
+Use Node.js 24 LTS, run `npm ci`, `npx playwright install chromium`, then
+`npm test`. The browser smoke tests exercise the deployed `index.html`, including
+question-bank structure, answer feedback, saved progress, flagged review, and
+exam completion. They do not validate clinical accuracy. Pull requests and pushes
+to main run the checks; the existing Pages deployment workflow is unchanged.
